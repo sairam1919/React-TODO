@@ -26,7 +26,8 @@ todoDataRouter.put('/updateTodo', (req, res) => {
 });
 
 todoDataRouter.delete('/deleteTodo', (req, res) => {
-    todoList = todoList.filter((data) => data.name !== req.body.name);
+    console.log(req.body?.name);
+    todoList = todoList.filter((data) => data.name !== req.body?.name);
     res.send(generateResponse(todoList, 200, "Data Removed Successfully"));
 });
 

@@ -12,6 +12,7 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+//To Handle the Body of post and put calls
 app.use(bodyParser.json());
 
 // Allow all origins

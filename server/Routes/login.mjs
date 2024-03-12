@@ -7,7 +7,7 @@ loginRouter.post('/authenticate', (req, res) => {
     const body = req?.body;
     if (body.username === "Sairam") {
         let userSessionObject = {
-            userName: body.name,
+            userName: body.username,
             userToken: generateToken()
         }
         res.send(generateResponse(userSessionObject, 200, "User Authenticated Successfully"));
